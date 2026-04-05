@@ -34,9 +34,11 @@ int to_dec(const char* bin){
 bool valid_input(const char* s){
 
 	while(*s){
-		if((*s >> 1) >= 25) return false; 
-		*s++;
-	}
+		if((*s ^ '0') > 1) 
+			return false;
+		s++;
+		}
+	
 	return true;
 }
 
