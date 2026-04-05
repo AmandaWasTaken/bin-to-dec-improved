@@ -34,7 +34,7 @@ int to_dec(const char* bin){
 bool valid_input(const char* s){
 
 	while(*s){
-		if((*s ^ '0') > 1) 
+		if((*s & ~1) != '0')
 			return false;
 		s++;
 		}
